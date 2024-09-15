@@ -57,13 +57,16 @@ def handler(event: Dict[str, Any], context) -> Union[S3LinkOutput, StacItemOutpu
 
 if __name__ == "__main__":
     asset_event = {
-        "collection": "ESACCI_Biomass_L4_AGB_V4_100m_2017",
+        "collection": "ESACCI_Biomass_L4_AGB_V4_100m",
         "asset_roles": ["data"],
         "asset_media_type": {
-            "tif": "image/tiff; application=geotiff; profile=cloud-optimized"
+            "estimates": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "standard deviation": "image/tiff; application=geotiff; profile=cloud-optimized",
         },
-        "asset_name": "tif",
-        "remote_fileurl": "s3://nasa-maap-data-store/file-staging/nasa-map/N70E140_ESACCI-BIOMASS-L4-AGB-MERGED-100m-2017-fv4.0.tif",
+        "asset_name": "estimates",
+        "metadata_file_url_key": "metadata",
+        "metadata_type": "standard_deviation",
+        "remote_fileurl": "s3://nasa-maap-data-store/file-staging/nasa-map/ESACCI_Biomass_L4_AGB_V4_100m_2017/N70E140_ESACCI-BIOMASS-L4-AGB-MERGED-100m-2017-fv4.0.tif",
     }
 
     print(json.dumps(handler(asset_event, {}), indent=2))

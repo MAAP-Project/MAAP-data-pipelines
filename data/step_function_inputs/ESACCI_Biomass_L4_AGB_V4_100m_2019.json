@@ -5,6 +5,7 @@
   "upload": true,
   "user_shared": false,
   "cogify": true,
+  "ingest": false,
   "asset_roles": ["data"],
   "asset_media_type": {
           "tif": "image/tiff; application=geotiff; profile=cloud-optimized"

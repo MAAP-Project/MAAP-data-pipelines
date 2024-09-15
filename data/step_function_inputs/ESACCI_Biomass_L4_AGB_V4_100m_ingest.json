@@ -1,0 +1,18 @@
+{
+    "collection": "ESACCI_Biomass_L4_AGB_V4_100m",
+    "discovery": "inventory",
+    "inventory_url": "s3://maap-ops-workspace/emileten/CCI_all_years_cog_with_sd_column.csv",
+    "upload": false,
+    "user_shared": false,
+    "cogify": false,
+    "ingest": true,
+    "asset_roles": ["data"],
+    "asset_media_type": {
+            "estimates": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "standard deviation": "image/tiff; application=geotiff; profile=cloud-optimized"
+      },
+    "asset_name": "estimates",
+    "metadata_file_url_key": "metadata",
+    "metadata_type": "standard_deviation"
+  }
+  

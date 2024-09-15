@@ -1,0 +1,53 @@
+{
+    "id": "ESACCI_Biomass_L4_AGB_V4_100m",
+    "stac_version": "1.0.0",
+    "license": "ESA-CCI-Data-Policy-free-and-open-access",
+    "title": "ESA CCI Above-Ground Biomass Product Level 4 Version 4",
+    "type": "Collection",
+    "description": "This dataset comprises estimates of forest above-ground biomass for the years 2017, 2018, 2019 and 2020, version 4. They are derived from a combination of Earth observation data, depending on the year, from the Copernicus Sentinel-1 mission, Envisat’s ASAR instrument and JAXA’s Advanced Land Observing Satellite (ALOS-1 and ALOS-2), along with additional information from Earth observation sources. The data has been produced as part of the European Space Agency's (ESA's) Climate Change Initiative (CCI) programme by the Biomass CCI team.",
+    "extent": {
+      "spatial": {
+        "bbox": [
+          [
+            -180,
+            -90,
+            180,
+            90
+          ]
+        ]
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2017-01-01T00:00:00.000Z",
+            "2020-12-31T23:59:59.999Z"
+          ]
+        ]
+      }
+    },
+    "keywords": ["ESA", "CCI", "Biomass"],
+    "links": [],
+    "item_assets": {
+      "estimates": {
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "roles": [
+              "data"
+          ],
+          "title": "Cloud Optimized GeoTIFF of AGB estimates",
+          "description": "Cloud Optimized GeoTIFF of AGB estimates"
+      },
+      "standard_deviation": {
+        "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "roles": [
+              "data"
+          ],
+          "title": "Cloud Optimized GeoTIFF of AGB standard deviation",
+          "description": "Cloud Optimized GeoTIFF of AGB standard deviation"
+      }        
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}
