@@ -76,8 +76,7 @@ def handler(event, context):
             if metadata_filename and metadata_type:
                 file_obj["assets"] = {metadata_type: metadata_filename}
             for key, value in event.items():
-                if "asset" in key:
-                    file_obj[key] = value
+                file_obj[key] = value  # Pass ALL keys along
             payload["objects"].append(file_obj)
             file_obj_size = len(json.dumps(file_obj, ensure_ascii=False).encode("utf8"))
             file_objs_size = file_objs_size + file_obj_size
